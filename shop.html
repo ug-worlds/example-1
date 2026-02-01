@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop</title>
+
+  <!-- IN-BUILT PREMIUM CSS -->
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #020617;
+      color: #e5e7eb;
+      min-height: 100vh;
+    }
+
+    nav {
+      padding: 16px 8%;
+      background: rgba(2,6,23,0.9);
+    }
+
+    nav a {
+      color: #e5e7eb;
+      margin-right: 20px;
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+
+    nav a:hover {
+      color: #38bdf8;
+    }
+
+    section {
+      padding: 60px 8%;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 2.2rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 25px;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.05);
+      backdrop-filter: blur(12px);
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 25px 60px rgba(0,0,0,0.4);
+      transition: transform 0.35s ease, box-shadow 0.35s ease;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 35px 80px rgba(0,0,0,0.6);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card-body {
+      padding: 18px;
+      text-align: center;
+    }
+
+    .card-body h3 {
+      font-size: 1rem;
+      margin-bottom: 10px;
+    }
+
+    .card-body button {
+      padding: 10px 22px;
+      border-radius: 999px;
+      border: none;
+      background: linear-gradient(135deg, #38bdf8, #22d3ee);
+      color: #020617;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform 0.25s ease;
+    }
+
+    .card-body button:hover {
+      transform: scale(1.05);
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 1200px) {
+      .grid { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    @media (max-width: 768px) {
+      .grid { grid-template-columns: repeat(1, 1fr); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="shop.html">Shop</a>
+    <a href="contact.html">Contact</a>
+    <a href="social.html">Social</a>
+  </nav>
+
+  <!-- SHOP -->
+  <section>
+    <h1>Featured Products</h1>
+
+    <div class="grid">
+
+      <!-- PRODUCT 1 -->
+      <div class="card">
+        <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/mobile/iphone-14.jpg" alt="">
+        <div class="card-body">
+          <h3>Apple iPhone 14</h3>
+          <button onclick="buy('https://www.flipkart.com/')">Buy on Flipkart</button>
+        </div>
+      </div>
+
+      <!-- PRODUCT 2 -->
+      <div class="card">
+        <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/laptop/macbook.jpg" alt="">
+        <div class="card-body">
+          <h3>MacBook Laptop</h3>
+          <button onclick="buy('https://www.flipkart.com/')">Buy on Flipkart</button>
+        </div>
+      </div>
+
+      <!-- PRODUCT 3 -->
+      <div class="card">
+        <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/headphone.jpg" alt="">
+        <div class="card-body">
+          <h3>Wireless Headphones</h3>
+          <button onclick="buy('https://www.flipkart.com/')">Buy on Flipkart</button>
+        </div>
+      </div>
+
+      <!-- PRODUCT 4 -->
+      <div class="card">
+        <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/smartwatch.jpg" alt="">
+        <div class="card-body">
+          <h3>Smart Watch</h3>
+          <button onclick="buy('https://www.flipkart.com/')">Buy on Flipkart</button>
+        </div>
+      </div>
+
+      <!-- PRODUCT 5 -->
+      <div class="card">
+        <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/shoes.jpg" alt="">
+        <div class="card-body">
+          <h3>Running Shoes</h3>
+          <button onclick="buy('https://www.flipkart.com/')">Buy on Flipkart</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- IN-BUILT JS -->
+  <script>
+    function buy(url) {
+      window.open(url, "_blank");
+    }
+  </script>
+
+</body>
+</html>
