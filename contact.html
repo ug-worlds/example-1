@@ -131,13 +131,27 @@
   <!-- CONTACT FORM -->
   <div class="container">
     <h1>Get in Touch</h1>
-    <p>Have a question or project in mind?  
-       Send a message and we’ll respond quickly.</p>
+    <p>
+      Have a question or project in mind?<br>
+      Send a message and we’ll respond quickly.
+    </p>
 
     <form id="contactForm">
+      <!-- 1. NAME -->
       <input type="text" name="name" placeholder="Your Name" required>
+
+      <!-- 2. EMAIL -->
       <input type="email" name="email" placeholder="Your Email" required>
+
+      <!-- 3. MOBILE NUMBER -->
+      <input type="tel" name="mobile" placeholder="Mobile Number" required>
+
+      <!-- 4. ORDER / SERVICE -->
+      <input type="text" name="order" placeholder="Order / Service" required>
+
+      <!-- 5. MESSAGE -->
       <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+
       <button type="submit">Send Message</button>
     </form>
 
